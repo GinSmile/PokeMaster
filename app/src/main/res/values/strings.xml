@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">手机管理大师</string>
+    <string name="title_activity_activity_all_apps">全部应用</string>
+    <string name="title_activity_running">正在运行</string>
+    <string name="title_activity_system_info">系统信息</string>
+    <string name="action_settings">设置</string>
+    <string name="title_activity_file">文件管理</string>
+    <string name="avaMeme">内存</string>
+    <string name="avaStro">存储</string>
+
+
+
+
+
+</resources>
