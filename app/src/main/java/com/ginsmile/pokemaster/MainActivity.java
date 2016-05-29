@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -31,13 +30,12 @@ public class MainActivity extends AppCompatActivity {
         mActivityManager.getMemoryInfo(info);
         double availMem = (double)info.availMem/1024/1024/1024;
         double totalMem = (double)info.totalMem/1024/1024/1024;
-        Log.v("TAG_1", availMem+"");
-        Log.v("TAG_2", totalMem+"");
-        availMem = (int)(availMem * 100)/100.0;
-        totalMem = (int)(totalMem * 100)/100.0;
-        int memPer = 100 - (int)(availMem/totalMem * 100);
+        double usedMem = totalMem - availMem;
+        int memPer = (int)(usedMem/totalMem * 100);
+
+        java.text.DecimalFormat df = new java.text.DecimalFormat("#.00");//取小数点后后两位
         mWaveView.setCenterTitle(memPer + "%");
-        mWaveView.setBottomTitle((totalMem - availMem) + "/" + totalMem + "GB");
+        mWaveView.setBottomTitle(df.format(usedMem) + "/" + df.format(totalMem) + "GB");
         mWaveView.setProgressValue(100 - memPer);
         mWaveView.setBorderWidth(3);
         //mWaveView.setBackground();

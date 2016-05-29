@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Debug;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -49,13 +50,14 @@ public class RunningActivity extends AppCompatActivity {
 
     //获取正在运行进程的信息
     private List<ProcessInfo> getRunningProcessInfo(){
-        mPackageManager = this.getPackageManager();
-        mActivityManager = (ActivityManager) this.getSystemService(Context.ACTIVITY_SERVICE);
+        mPackageManager = RunningActivity.this.getPackageManager();
+        mActivityManager = (ActivityManager) RunningActivity.this.getSystemService(Context.ACTIVITY_SERVICE);
 
         List<ProcessInfo> processInfoList = new ArrayList<ProcessInfo>();
         List<ActivityManager.RunningAppProcessInfo> appProcessList =
                 mActivityManager.getRunningAppProcesses();
 
+        Log.v("TAG___>",appProcessList.size()+"");
         for(int i = 0; i < appProcessList.size(); i++){
             ActivityManager.RunningAppProcessInfo info = appProcessList.get(i);
 

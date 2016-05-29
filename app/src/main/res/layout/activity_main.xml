@@ -18,15 +18,13 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:background="@color/colorPrimary"
             android:id="@+id/relativeLayout">
 
             <me.itangqi.waveloadingview.WaveLoadingView
                 android:id="@+id/waveLoadingView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_centerHorizontal="true"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 app:mlv_borderColor="@color/colorAccent"
                 app:mlv_borderWidth="3dp"
                 app:mlv_progressValue="60"
@@ -38,7 +36,9 @@
                 app:mlv_titleCenterColor="@color/colorTextWhite"
                 app:mlv_titleCenterSize="24sp"
                 app:mlv_waveAmplitude="14"
-                app:mlv_waveColor="@color/colorAccent"/>
+                app:mlv_waveColor="@color/colorAccent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
 
             <TextView
                 android:layout_width="140dp"
@@ -60,14 +60,14 @@
 
             <me.itangqi.waveloadingview.WaveLoadingView
                 android:id="@+id/waveLoadingView2"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
                 app:mlv_borderColor="@color/colorAccent"
                 app:mlv_borderWidth="3dp"
                 app:mlv_progressValue="60"
                 app:mlv_shapeType="circle"
-                app:mlv_titleBottom="11.6/16.0GB"
+                app:mlv_titleBottom="1.67/16.0GB"
                 app:mlv_titleBottomColor="@color/colorTextWhite"
                 app:mlv_titleBottomSize="14sp"
                 app:mlv_titleCenter="Center Title"
@@ -94,8 +94,6 @@
         android:layout_height="0dp"
         android:layout_weight="5"
         android:numColumns="3"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
         android:minHeight="90dp"
         android:stretchMode="columnWidth"
         android:gravity="center"
