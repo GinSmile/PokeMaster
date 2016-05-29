@@ -29,3 +29,8 @@
  截图：
     
  <img src="./screenshot/device-2016-05-30-003507.png" height="430" alt="simple2" />
+  <img src="./screenshot/device-2016-05-30-004641.png" height="430" alt="simple2" />
+  
+  
+  <img src="./screenshot/device-2016-05-30-004818.png" height="430" alt="simple2" />
+  <img src="./screenshot/device-2016-05-30-004717.png" height="430" alt="simple2" />
